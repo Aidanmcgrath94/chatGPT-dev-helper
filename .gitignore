@@ -133,7 +133,7 @@ dmypy.json
 
 # Data files
 *.csv
-*.json
+#*.json
 *.sql
 
 # Log files
