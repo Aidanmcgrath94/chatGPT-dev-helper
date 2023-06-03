@@ -1,8 +1,6 @@
 # README
 
-# OpenAIPy
-
-OpenAIPy is a project designed to generate code using [OpenAI](https://openai.com) based on the code you pass in. This project uses the OpenAI modules on python to break down the code, process and generate a response based on the provided code.
+This is a project designed to generate code using [OpenAI](https://openai.com) based on the code you pass in. This project uses the OpenAI modules on python to break down the code, process and generate a response based on the provided code.
 
 ## Requirements
 - Python 3.6 or above 
@@ -30,4 +28,4 @@ OpenAIPy is a project designed to generate code using [OpenAI](https://openai.co
 - `MAX_TOKENS`: Maximum number of characters allowed per text submission to OpenAI
 - `OUTPUT_DIR`: Output directory for generated responses. Directory is created if not found
 - `PREPROMPT`: Text to be passed before the code string to OpenAI
-- `ENGINE`: Name of the OpenAI engine being used #     print('finished')
+- `ENGINE`: Name of the OpenAI engine being used 
