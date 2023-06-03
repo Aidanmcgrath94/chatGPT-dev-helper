@@ -265,6 +265,7 @@ dmypy.json
 
 # Log files
 *.log
+*.DS_Store
 
 # API key 
 sec_config.json
