@@ -1,5 +1,3 @@
-save_result_to_file(output_path, result)
-
 # README
 
 # OpenAIPy
