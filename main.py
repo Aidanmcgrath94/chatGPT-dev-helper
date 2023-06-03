@@ -77,11 +77,11 @@ def main():
             })
 
     for file in files:
-        print("Running for " + file['cleanname'])
+        logging.info("Running for " + file['cleanname'])
         result = process_text_with_gpt(file['fullname'], pre_prompt, max_tokens)
         output_file_path = os.path.join(output_dir, f"{file['cleanname']}.md")
         save_result_to_file(output_file_path, result)
-        print(f"Result saved to {output_file_path}")
+        logging.info(f"Result saved to {output_file_path}")
 
 if __name__ == "__main__":
     main()
