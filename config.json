@@ -1,0 +1,10 @@
+{
+  "PREPROMPT": "Your job is collect all this code and create a detailed README in markdown for the project summerising details",
+  
+  "MAX_TOKENS": "2500",
+  "DOCUMENT_PATH": "input/edited.py",
+  "OUTPUT_DIR": "output/",
+  "LOGGING": "logging/openai-logs.log",
+  "CHUNK_SEPERATOR": "\n",
+  "ENGINE": "text-davinci-003"
+}
