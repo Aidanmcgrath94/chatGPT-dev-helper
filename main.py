@@ -32,7 +32,8 @@ def process_text_with_gpt(document_path, pre_prompt, max_tokens):
     with open(document_path, 'r') as file:
         text = file.read()
 
-    full_prompt = pre_prompt + text
+    stoppoint = "\"\"\""
+    full_prompt = text + stoppoint + pre_prompt
     wrap_limit = max_tokens - len(pre_prompt)
 
     # Split the text into chunks that are less than max_tokens
@@ -43,7 +44,12 @@ def process_text_with_gpt(document_path, pre_prompt, max_tokens):
         response = openai.Completion.create(
             engine=config_data["ENGINE"], 
             prompt=chunk,
-            max_tokens=max_tokens
+            max_tokens=max_tokens,
+            temperature=config_data["TEMPERATURE"],
+            top_p=config_data["TOP_P"],
+            frequency_penalty=config_data["FREQUENCY_PENALTY"],
+            presence_penalty=config_data["PRESENCE_PENALTY"],
+            stop=[stoppoint]
         )
         responses.append(response.choices[0].text.strip())
 
